@@ -453,32 +453,25 @@ Important files include:
 | `COX1_tree.ckp.gz`     | IQ-TREE checkpoint file            |
 
 ---
+
 ## Phylogenetic Tree Visualization
 
-The Maximum-Likelihood phylogenetic tree reconstructed from the four *Pterois* COX1 sequences was visualized using **FigTree**.
+The Maximum-Likelihood phylogenetic tree was visualized in R using the `ape` package.
 
-The tree was formatted to display:
+The figure displays:
 
-* Scientific species names
-* NCBI accession numbers
-* Branch support values
-* Branch lengths
-* A scale bar representing substitutions per site
+- *Pterois* species names in italics
+- NCBI accession numbers
+- Internal node positions
+- SH-aLRT / ultrafast bootstrap support
+- Branch lengths
+- A scale bar representing substitutions per site
 
-The final publication-style figure is available in:
+### Figure 1. Maximum-Likelihood phylogenetic tree based on COX1 sequences
 
-```text
-figures/COX1_Pterois_phylogenetic_tree.png
-```
+![Maximum-Likelihood phylogenetic tree of Pterois COX1 sequences](figures/COX1_Pterois_phylogenetic_tree_R.png)
 
-### Figure 1. Maximum-Likelihood phylogenetic tree of selected *Pterois* COX1 sequences
-
-![Maximum-Likelihood phylogenetic tree of Pterois COX1 sequences](figures/COX1_Pterois_phylogenetic_tree.png)
-
-
-
-**Figure 1.** Maximum-Likelihood phylogenetic reconstruction based on COX1 nucleotide sequences from four *Pterois* specimens representing three species. The analysis was performed using IQ-TREE v3.1.3 with the HKY+F substitution model selected by ModelFinder according to the Bayesian Information Criterion (BIC). Branch support values are shown as **SH-aLRT / ultrafast bootstrap**, based on 1000 replicates for each method. The scale bar represents the estimated number of nucleotide substitutions per site. *Pterois miles* sequences (PX789826.1 and OL691767.1) occur together in the reconstructed topology, whereas *P. russelii* (MH429332.1) and *P. volitans* (NC_025290.1) form a separate supported grouping. The internal branch connecting *P. russelii* and *P. volitans* received 100/100 support. Due to substantial differences in sequence coverage and the high proportion of gaps in several sequences, this tree should be interpreted as a preliminary COX1-based phylogenetic reconstruction.
-
+**Figure 1.** Maximum-Likelihood phylogenetic tree reconstructed from COX1 nucleotide sequences of four *Pterois* specimens representing three species. The tree was inferred using IQ-TREE v3.1.3 under the HKY+F model selected by ModelFinder according to BIC, with 1000 ultrafast bootstrap and 1000 SH-aLRT replicates. The scale bar represents nucleotide substitutions per site. The two *Pterois miles* sequences cluster together, while *P. russelii* and *P. volitans* form a separate supported group. The internal branch connecting *P. russelii* and *P. volitans* received 100/100 support. Due to substantial differences in sequence coverage and the high proportion of gaps in several sequences, this topology should be considered a preliminary COX1-based phylogenetic reconstruction.
 
 # 14. Reproducibility
 
