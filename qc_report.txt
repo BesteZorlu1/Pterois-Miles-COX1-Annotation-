@@ -1,0 +1,18 @@
+Pterois miles COX1 Sequence Quality Control
+==============================================
+
+Sequence: PX789826.1
+Length: 407 bp
+GC content: 42.01%
+Ambiguous bases: 38
+
+Sequence: OL691767.1
+Length: 589 bp
+GC content: 46.86%
+Ambiguous bases: 0
+
+Interpretation:
+PX789826.1 contains 38 IUPAC ambiguity-coded positions.
+OL691767.1 contains no ambiguous bases.
+Ambiguous nucleotide codes were retained and were not arbitrarily
+converted to A, T, G, or C.
