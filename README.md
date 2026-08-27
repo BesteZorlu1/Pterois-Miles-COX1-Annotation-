@@ -213,7 +213,8 @@ Pterois-Miles-COX1-Annotation/
 
 
 This repository is an educational open-source bioinformatics project developed to practice nucleotide sequence analysis, annotation, comparative genomics, and phylogenetic workflows.
-Multiple Sequence Alignment
+
+### Multiple Sequence Alignment
 
 Multiple sequence alignment was performed using MAFFT v7.526.
 
@@ -241,7 +242,7 @@ The main cleaned alignment used for downstream analysis is:
 
 results/alignment/COX1_4species_aligned_clean.fasta
 
-4. Alignment Quality Control
+## Alignment Quality Control
 
 Alignment quality was evaluated using a Python script based on Biopython.
 
@@ -267,7 +268,7 @@ The QC script is located in:
 
 scripts/alignment_qc.py
 
-5. Maximum-Likelihood Phylogenetic Analysis
+### Maximum-Likelihood Phylogenetic Analysis
 
 A Maximum-Likelihood phylogenetic analysis was performed using IQ-TREE 3.1.3.
 
