@@ -214,105 +214,102 @@ Pterois-Miles-COX1-Annotation/
 
 This repository is an educational open-source bioinformatics project developed to practice nucleotide sequence analysis, annotation, comparative genomics, and phylogenetic workflows.
 
-### Multiple Sequence Alignment
+## 3. Multiple Sequence Alignment
 
-Multiple sequence alignment was performed using MAFFT v7.526.
+Multiple sequence alignment was performed using **MAFFT v7.526**.
 
-Four COX1/COI sequences were aligned:
+Four *Pterois* COX1/COI sequences were aligned:
 
-Pterois miles — PX789826.1
-Pterois miles — OL691767.1
-Pterois russelii — MH429332.1
-Pterois volitans — NC_025290.1
+* *Pterois miles* — PX789826.1
+* *Pterois miles* — OL691767.1
+* *Pterois russelii* — MH429332.1
+* *Pterois volitans* — NC_025290.1
 
-The final alignment contains:
+The final alignment contained:
 
-4 sequences
-1551 aligned positions
-43 distinct patterns
-16 parsimony-informative sites
-14 singleton sites
-1521 constant sites
+* **4 sequences**
+* **1551 aligned positions**
+* **43 distinct patterns**
+* **16 parsimony-informative sites**
+* **14 singleton sites**
+* **1521 constant sites**
 
-Alignment files are stored in:
+The cleaned alignment used for downstream analyses is:
 
-results/alignment/
+`results/alignment/COX1_4species_aligned_clean.fasta`
 
-The main cleaned alignment used for downstream analysis is:
+---
 
-results/alignment/COX1_4species_aligned_clean.fasta
+## 4. Alignment Quality Control
 
-## Alignment Quality Control
+Alignment quality was evaluated using **Python and Biopython**.
 
-Alignment quality was evaluated using a Python script based on Biopython.
+| Sequence                    | Gaps | Ambiguous bases |
+| --------------------------- | ---: | --------------: |
+| PX789826.1 (*P. miles*)     | 1144 |              38 |
+| OL691767.1 (*P. miles*)     |  962 |               0 |
+| MH429332.1 (*P. russelii*)  |  896 |               0 |
+| NC_025290.1 (*P. volitans*) |    0 |               0 |
 
-The quality-control analysis showed:
+The alignment length was **1551 bp**.
 
-Sequence	Gaps	Ambiguous bases
-PX789826.1	1144	38
-OL691767.1	962	0
-MH429332.1	896	0
-NC_025290.1:5492-7042	0	0
+The PX789826.1 sequence contained **38 ambiguous nucleotide positions**, which were retained for downstream analyses.
 
-The alignment length was 1551 bp.
-
-The PX789826.1 sequence contained 38 ambiguous nucleotide positions. These positions were retained for downstream analyses.
-
-Three sequences contained more than 50% gaps/ambiguity in the final alignment. Therefore, the phylogenetic results should be interpreted with caution, particularly because the sequences differ substantially in their aligned coverage.
+Three sequences contained more than 50% gaps/ambiguity in the alignment. Therefore, the resulting phylogenetic relationships should be interpreted cautiously because of differences in sequence coverage.
 
 The QC report is stored in:
 
-results/alignment_qc_report.txt
+`results/alignment_qc_report.txt`
 
-The QC script is located in:
+The analysis script is:
 
-scripts/alignment_qc.py
+`scripts/alignment_qc.py`
 
-### Maximum-Likelihood Phylogenetic Analysis
+---
 
-A Maximum-Likelihood phylogenetic analysis was performed using IQ-TREE 3.1.3.
+## 5. Maximum-Likelihood Phylogenetic Analysis
 
-The analysis was performed using:
+Phylogenetic analysis was performed using **IQ-TREE 3.1.3**.
 
-ModelFinder for model selection
-Best-fit model according to BIC: HKY+F
-Ultrafast bootstrap: 1000 replicates
-SH-like aLRT: 1000 replicates
+The analysis included:
 
-The alignment contained four taxa and 1551 nucleotide positions.
+* **ModelFinder** for model selection
+* Best-fit model according to BIC: **HKY+F**
+* **1000 ultrafast bootstrap replicates**
+* **1000 SH-like aLRT replicates**
 
-The resulting tree was:
+The resulting Maximum-Likelihood tree was:
 
+```text
 (PX789826.1:0.0000010014,
  OL691767.1:0.0000022637,
  (MH429332.1:0.0045709101,
   NC_025290.1_5492-7042:0.0062837610)100/100:0.0423795596);
+```
 
-The two Pterois miles sequences (PX789826.1 and OL691767.1) formed a very closely related group based on the inferred tree topology.
+The topology shows that the two *Pterois miles* sequences, PX789826.1 and OL691767.1, form a closely related group.
 
-Pterois russelii and Pterois volitans formed another supported group with:
+*Pterois russelii* and *Pterois volitans* form a separate group supported by:
 
-SH-aLRT = 100
-Ultrafast bootstrap = 100
+* **SH-aLRT = 100**
+* **Ultrafast bootstrap = 100**
 
-The phylogenetic analysis therefore recovered a topology in which the two P. miles sequences are closely associated, while P. russelii and P. volitans form a separate group.
+These results indicate strong support for the corresponding internal branch. However, due to the high proportion of gaps in several sequences, the topology should be considered a **preliminary COX1-based phylogenetic result**.
 
-Because several sequences contain substantial gaps due to differences in sequence coverage, these relationships should be considered as COX1-based preliminary phylogenetic results rather than definitive species-level evolutionary relationships.
+### Phylogenetic Output Files
 
-Phylogenetic output files
+The IQ-TREE results are stored in:
 
-The main IQ-TREE output files are located in:
+`results/phylogeny/`
 
-results/phylogeny/
+Important output files include:
 
-Important files include:
-
-COX1_tree.treefile — Maximum-Likelihood tree
-COX1_tree.contree — bootstrap consensus tree
-COX1_tree.iqtree — complete IQ-TREE analysis report
-COX1_tree.splits.nex — split support values
-COX1_tree.mldist — likelihood distance matrix
-COX1_tree.log — analysis log
+* `COX1_tree.treefile` — Maximum-Likelihood tree
+* `COX1_tree.contree` — Bootstrap consensus tree
+* `COX1_tree.iqtree` — IQ-TREE analysis report
+* `COX1_tree.splits.nex` — Branch support information
+* `COX1_tree.mldist` — Likelihood distance matrix
+* `COX1_tree.log` — Analysis log
 
 ## Author
 
