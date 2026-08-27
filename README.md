@@ -149,5 +149,90 @@ Additional bioinformatics tools will be added as the project progresses.
 Biology & Aquatic Sciences and Engineering 
 İstanbul University 
 
+# In Silico Annotation of the COX1 Gene in Pterois miles
+
+## Project Overview
+
+This project investigates the mitochondrial cytochrome c oxidase subunit I (COX1) gene of *Pterois miles* using publicly available DNA sequences and basic bioinformatics analyses.
+
+The workflow includes sequence retrieval, BLAST identification, multiple sequence alignment, and alignment quality control.
+
+## Project Workflow
+
+1. Sequence retrieval
+2. BLAST analysis
+3. Multiple sequence alignment using MAFFT
+4. Alignment cleaning
+5. Alignment quality control using Python and Biopython
+6. Phylogenetic analysis
+
+## Sequence Identification
+
+The query sequence PX789826.1 was identified as a partial mitochondrial COX1 sequence of *Pterois miles*.
+
+BLAST analysis supported its identification as *Pterois miles* COX1.
+
+## Multiple Sequence Alignment
+
+Multiple sequence alignment was performed using MAFFT v7.526.
+
+The alignment included two *Pterois miles* COX1 sequences:
+
+- PX789826.1
+- OL691767.1
+
+The final alignment length was 589 bp.
+
+## Alignment Quality Control
+
+Alignment quality was evaluated using Python and Biopython.
+
+The quality control script calculated:
+
+- Number of sequences
+- Alignment length
+- Number of gaps
+- Number of ambiguous nucleotide positions
+
+### QC Results
+
+| Sequence | Gaps | Ambiguous bases |
+|----------|------|-----------------|
+| PX789826.1 | 182 | 38 |
+| OL691767.1 | 0 | 0 |
+
+The PX789826.1 sequence contains several ambiguous nucleotide positions and gaps in the alignment. This is consistent with the sequence being a shorter partial COX1 sequence and containing ambiguous IUPAC nucleotide codes.
+
+The OL691767.1 sequence showed no gaps or ambiguous bases in the final alignment.
+
+## Software
+
+- MAFFT v7.526
+- Python 3.13
+- Biopython
+
+## Project Structure
+
+```text
+Pterois-Miles-COX1-Annotation/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── results/
+│   ├── alignment/
+│   ├── phylogeny/
+│   ├── blast_results.txt
+│   └── qc_report.txt
+│
+├── scripts/
+│   └── alignment_qc.py
+│
+├── figures/
+│
+├── Pterois_miles_COX1.fasta.fasta
+└── README.md
+
 
 This repository is an educational open-source bioinformatics project developed to practice nucleotide sequence analysis, annotation, comparative genomics, and phylogenetic workflows.
