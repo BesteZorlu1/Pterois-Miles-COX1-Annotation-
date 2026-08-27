@@ -1,0 +1,30 @@
+BLAST RESULTS
+=============
+
+Query 1: OL691767.1
+Species: Pterois miles
+Gene: COX1
+
+Top BLAST results:
+OL691777.1 - Pterois miles
+Query coverage: 100%
+Percent identity: 100.00%
+E-value: 0.0
+
+Multiple additional Pterois miles COX1 sequences showed:
+Query coverage: 100%
+Percent identity: 100.00%
+E-value: 0.0
+
+
+Query 2: PX789826.1
+Species: Pterois miles
+Gene: COX1
+
+Top BLAST result:
+OL691765.1 - Pterois miles
+Query coverage: 100%
+Percent identity: 90.66%
+E-value: 2e-170
+
+Multiple additional Pterois miles COX1 sequences showed similar results.
