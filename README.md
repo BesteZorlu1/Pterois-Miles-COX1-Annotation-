@@ -142,29 +142,6 @@ Additional bioinformatics tools will be added as the project progresses.
 
 --- 
 
-## Author
-
-**Beste Zorlu**
-
-Biology & Aquatic Sciences and Engineering 
-İstanbul University 
-
-# In Silico Annotation of the COX1 Gene in Pterois miles
-
-## Project Overview
-
-This project investigates the mitochondrial cytochrome c oxidase subunit I (COX1) gene of *Pterois miles* using publicly available DNA sequences and basic bioinformatics analyses.
-
-The workflow includes sequence retrieval, BLAST identification, multiple sequence alignment, and alignment quality control.
-
-## Project Workflow
-
-1. Sequence retrieval
-2. BLAST analysis
-3. Multiple sequence alignment using MAFFT
-4. Alignment cleaning
-5. Alignment quality control using Python and Biopython
-6. Phylogenetic analysis
 
 ## Sequence Identification
 
@@ -236,3 +213,12 @@ Pterois-Miles-COX1-Annotation/
 
 
 This repository is an educational open-source bioinformatics project developed to practice nucleotide sequence analysis, annotation, comparative genomics, and phylogenetic workflows.
+
+
+## Author
+
+**Beste Zorlu**
+
+Biology & Aquatic Sciences and Engineering 
+İstanbul University
+
